@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: override-vanilla-priority
+expected_outcome: |
+  Explains WeaponCore's own vanilla parts use DefinitionPriority = int.MinValue; definitions for the same block SubtypeId are matched by HardPoint.PartName and HardWare.Type, and the new one replaces the old only if its DefinitionPriority is strictly higher (a tie keeps the one already loaded). Copying int.MinValue therefore loses; set a higher value such as 0 or 1 and keep the same PartName.

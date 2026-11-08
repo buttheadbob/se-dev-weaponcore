@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: duplicate-muzzlepart-shutdown
+expected_outcome: |
+  Explains that weapon parts on a block are keyed by MuzzlePartId, so two definitions on one SubtypeId with the same MuzzlePartId collide; block init then fails with PlatformCrash 'Invalid weapon system ... duplicate partnames' with suppress=true, which sets SuppressWc and shuts WeaponCore down for the whole session. Fix: give each weapon its own MuzzlePartId (its own subpart).

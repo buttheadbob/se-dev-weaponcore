@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: damage-scales-zero
+expected_outcome: |
+  Explains that DamageScales.Grids.Large/Small and Armor.Armor/Light/Heavy/NonArmor default to 0 when omitted, that WeaponCore treats any value >= 0 as a multiplier (only < 0 means no scaling), so the omitted fields multiply block damage by 0. Fix: set them to -1f (as WeaponCore's own CoreParts do) or set NoGridOrArmorScaling = true.

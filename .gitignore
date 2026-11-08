@@ -1,0 +1,15 @@
+# Generated locally from your own WeaponCore clone by scripts/refresh.py; never committed.
+# WeaponCore is CC BY-NC-SA 4.0, so none of its code or data is distributed with this skill.
+/tables/
+/data/
+/source/
+/graph/
+
+# Eval run output
+*-workspace/
+/evals/results/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: wcapi-load-ready
+expected_outcome: |
+  Explains that WcApi.Load(readyCallback, getWeaponDefinitions) throws if called twice without Unload; it registers on channel 67549756549 and sends "ApiEndpointRequest", and WeaponCore replies with the delegate dictionary, after which IsReady is true and the readyCallback runs. Calls must wait for IsReady/the callback; Unload in UnloadData.
